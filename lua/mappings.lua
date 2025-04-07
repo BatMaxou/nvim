@@ -27,10 +27,14 @@ map("n", "<leader>:", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>:", "gc", { desc = "toggle comment", remap = true })
 
 ------------ oil ------------
-map("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+map("n", "-", "<cmd>Oil --float<CR>", { desc = "Open parent directory" })
 
 ------------ diagnostic ------------
 map("n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "show diagnostics of the line" })
 
 ------------ terminal ------------
 map({ "n", "t" }, "<A-i>", function() Snacks.terminal.toggle() end, { desc = "Toggle terminal" })
+
+------------ gitsigns ------------
+map("n", "<leader>gw", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "[G]itsigns [W]ho ?" })
+map("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })

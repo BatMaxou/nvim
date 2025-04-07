@@ -16,4 +16,5 @@ return {
   require("configs.conform"),
   require("configs.blink"),
   require("configs.lazygit"),
+  require("configs.gitsigns"),
 }
