@@ -41,6 +41,18 @@ return {
           ["BlinkCmpDocBorder"] = { link = "Normal" },
           ["BlinkCmpDocSeparator"] = { link = "Normal" },
           ["BlinkCmpSignatureHelpBorder"] = { link = "Normal" },
+          ------------ Git Graph ------------
+          ["GitGraphBranch1"] = { link = "Special" },
+          ["GitGraphBranch2"] = { link = "Exception" },
+          ["GitGraphBranch3"] = { link = "Constant" },
+          ["GitGraphBranch4"] = { link = "Character" },
+          ["GitGraphBranch5"] = { link = "Keyword" },
+          ["GitGraphHash"] = { link = "Exception" },
+          ["GitGraphTimestamp"] = { link = "Keyword" },
+          ["GitGraphAuthor"] = { link = "Special" },
+          ["GitGraphBranchName"] = { link = "Character" },
+          ["GitGraphBranchTag"] = { link = "Constant" },
+          ["GitGraphBranchMsg"] = { link = "Comment" },
         }
       end,
     })
