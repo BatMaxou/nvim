@@ -15,4 +15,5 @@ return {
   require("configs.snacks"),
   require("configs.conform"),
   require("configs.blink"),
+  require("configs.lazygit"),
 }
