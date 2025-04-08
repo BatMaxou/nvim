@@ -20,4 +20,5 @@ return {
   require("configs.gitgraph"),
   require("configs.colorizer"),
   require("configs.auto-pairs"),
+  require("configs.surround"),
 }
