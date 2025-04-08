@@ -3,7 +3,10 @@ return {
   cmd = { "NvimTreeToggle", "NvimTreeFocus" },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
-    filters = { dotfiles = false },
+    filters = {
+      git_ignored = false,
+      custom = { "^\\.git" },
+    },
     disable_netrw = true,
     hijack_cursor = true,
     sync_root_with_cwd = true,
@@ -12,7 +15,7 @@ return {
       update_root = false,
     },
     view = {
-      width = 30,
+      width = 40,
       preserve_window_proportions = true,
     },
     renderer = {
