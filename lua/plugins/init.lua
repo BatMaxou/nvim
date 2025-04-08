@@ -18,4 +18,5 @@ return {
   require("configs.lazygit"),
   require("configs.gitsigns"),
   require("configs.gitgraph"),
+  require("configs.colorizer"),
 }
