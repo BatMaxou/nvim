@@ -90,6 +90,16 @@ return {
           ["GitGraphBranchName"] = { link = "Green" },
           ["GitGraphBranchTag"] = { link = "LightOrange" },
           ["GitGraphBranchMsg"] = { link = "Black" },
+          ------------ Indent ------------
+          ["SnacksIndent"] = { link = "Black" },
+          ["SnacksIndent1"] = { link = "Blue" },
+          ["SnacksIndent2"] = { link = "LightRed" },
+          ["SnacksIndent3"] = { link = "Green" },
+          ["SnacksIndent4"] = { link = "Violet" },
+          ["SnacksIndent5"] = { link = "LightOrange" },
+          ["SnacksIndent6"] = { link = "CambridgeBlue" },
+          ["SnacksIndent7"] = { link = "VioletGray" },
+          ["SnacksIndent8"] = { link = "Orange" },
         }
       end,
     })

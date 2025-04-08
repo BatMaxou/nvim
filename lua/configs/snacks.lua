@@ -3,5 +3,6 @@ return {
   opts = {
     terminal = {},
     dashboard = {},
+    indent = require("configs.indent"),
   },
 }
