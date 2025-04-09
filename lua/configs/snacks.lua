@@ -1,8 +1,8 @@
 return {
   "folke/snacks.nvim",
   opts = {
-    terminal = {},
     dashboard = {},
+    terminal = require("configs.terminal"),
     indent = require("configs.indent"),
   },
 }
