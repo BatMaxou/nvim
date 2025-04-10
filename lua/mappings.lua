@@ -24,7 +24,7 @@ map("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "toggle relative number" })
 
 ------------ comment ------------
 map("n", "<leader>:", "gcc", { desc = "toggle comment", remap = true })
-map("v", "<leader>:", "gc", { desc = "toggle comment", remap = true })
+map("v", "<leader>:", "gbc", { desc = "toggle comment", remap = true })
 
 ------------ oil ------------
 map("n", "-", "<cmd>Oil --float<CR>", { desc = "Open parent directory" })

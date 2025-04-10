@@ -3,10 +3,12 @@ return {
   config = function()
     require("kanagawa").setup({
       transparent = true,
+      terminalColors = false,
       colors = {
         palette = {
           white = "#ffffff",
           pearl = "#dcd7ba",
+          ecru = "#e6c384",
           violet_gray = "#b8b4d0",
           yellow = "#ffb713",
           light_orange = "#ffa066",
@@ -27,6 +29,7 @@ return {
           ------------ General ------------
           White = { fg = colors.palette.white },
           Pearl = { fg = colors.palette.pearl },
+          Ecru = { fg = colors.palette.ecru },
           VioletGray = { fg = colors.palette.violet_gray },
           Yellow = { fg = colors.palette.yellow },
           LightOrange = { fg = colors.palette.light_orange },
@@ -39,7 +42,7 @@ return {
           DarkBlue = { fg = colors.palette.dark_blue },
           Violet = { fg = colors.palette.violet },
           Black = { fg = colors.palette.black },
-          Backgroud = { fg = colors.palette.deep_black, bg = colors.palette.pearl },
+          Background = { fg = colors.palette.deep_black, bg = colors.palette.pearl },
           ------------ Markdown ------------
           ["@markup.link.url.markdown_inline"] = { link = "Blue" }, -- (url)
           ["@markup.link.label.markdown_inline"] = { link = "Orange" }, -- [label]
@@ -76,8 +79,6 @@ return {
           ["BlinkCmpDocBorder"] = { link = "Pearl" },
           ["BlinkCmpDocSeparator"] = { link = "Pearl" },
           ["BlinkCmpSignatureHelpBorder"] = { link = "Pearl" },
-          ------------ Terminal ------------
-          ["SnacksDashboardTerminal"] = { link = "White" },
           ------------ Git Graph ------------
           ["GitGraphBranch1"] = { link = "Blue" },
           ["GitGraphBranch2"] = { link = "LightRed" },
