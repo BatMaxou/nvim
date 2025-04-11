@@ -6,8 +6,8 @@ return {
     border = "rounded",
     wo = {
       winhighlight = {
-        NormalFloat = "White",
-        FloatBorder = "CambridgeBlue",
+        NormalFloat = "Main",
+        FloatBorder = "BlueVariant",
       },
     },
   },

@@ -22,6 +22,8 @@ map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "general copy whole file" })
 map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "toggle line number" })
 map("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "toggle relative number" })
 
+map("n", "<S-b>", "e", { desc = "End Word" })
+
 ------------ comment ------------
 map("n", "<leader>:", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>:", "gbc", { desc = "toggle comment", remap = true })

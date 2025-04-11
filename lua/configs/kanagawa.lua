@@ -5,44 +5,47 @@ return {
       transparent = true,
       terminalColors = false,
       colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = "none",
+            },
+          },
+        },
         palette = {
           white = "#ffffff",
-          pearl = "#dcd7ba",
-          ecru = "#e6c384",
-          violet_gray = "#b8b4d0",
-          yellow = "#ffb713",
-          light_orange = "#ffa066",
-          orange = "#ff9e3b",
-          light_red = "#e46876",
-          red = "#e82424",
-          green = "#98bb6c",
-          cambridge_blue = "#7aa89f",
-          blue = "#7fb4ca",
-          dark_blue = "#7e9cd8",
-          violet = "#957fb8",
-          black = "#727169",
-          deep_black = "#1f1f28",
         },
       },
       overrides = function(colors)
+        local theme = colors.theme
+
         return {
-          ------------ General ------------
+          ------------ Transparent Default Windows ------------
+          NormalFloat = { bg = "none" },
+          FloatBorder = { bg = "none" },
+          FloatTitle = { bg = "none" },
+
+          -- Save an hlgroup with dark background and dimmed foreground
+          -- so that you can use it where your still want darker windows.
+          -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
+          NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+          ------------ General | Foreground ------------
+          Main = { fg = colors.palette.fujiWhite },
           White = { fg = colors.palette.white },
-          Pearl = { fg = colors.palette.pearl },
-          Ecru = { fg = colors.palette.ecru },
-          VioletGray = { fg = colors.palette.violet_gray },
-          Yellow = { fg = colors.palette.yellow },
-          LightOrange = { fg = colors.palette.light_orange },
-          Orange = { fg = colors.palette.orange },
-          LightRed = { fg = colors.palette.light_red },
-          Red = { fg = colors.palette.red },
-          Green = { fg = colors.palette.green },
-          CambridgeBlue = { fg = colors.palette.cambridge_blue },
-          Blue = { fg = colors.palette.blue },
-          DarkBlue = { fg = colors.palette.dark_blue },
-          Violet = { fg = colors.palette.violet },
-          Black = { fg = colors.palette.black },
-          Background = { fg = colors.palette.deep_black, bg = colors.palette.pearl },
+          LightOrange = { fg = colors.palette.surimiOrange },
+          Orange = { fg = colors.palette.roninYellow },
+          LightRed = { fg = colors.palette.peachRed },
+          Red = { fg = colors.palette.samouraiRed },
+          Green = { fg = colors.palette.springGreen },
+          Blue = { fg = colors.palette.springBlue },
+          DarkBlue = { fg = colors.palette.crystalBlue },
+          BlueVariant = { fg = colors.palette.waveAqua2 },
+          LightViolet = { fg = colors.palette.springViolet2 },
+          Violet = { fg = colors.palette.oniViolet },
+          Black = { fg = colors.palette.fujiGray },
+          DeepBlack = { fg = colors.palette.sumiInk0 },
+          ------------ General | Background ------------
+          Background = { fg = colors.palette.sumiInk0, bg = colors.palette.fujiWhite },
           ------------ Markdown ------------
           ["@markup.link.url.markdown_inline"] = { link = "Blue" }, -- (url)
           ["@markup.link.label.markdown_inline"] = { link = "Orange" }, -- [label]
@@ -50,35 +53,37 @@ return {
           ["@markup.raw.markdown_inline"] = { link = "Black" }, -- `code`
           ["@markup.list.markdown"] = { link = "DarkBlue" }, -- + list
           ["@markup.quote.markdown"] = { link = "Red" }, -- > blockcode
+          ------------ JSON ------------
+          ["@number.json"] = { link = "Main" },
           ------------ PHP ------------
           ["@keyword.import.php"] = { link = "Violet" },
-          ["@module.php"] = { link = "VioletGray" },
-          ["@function.method.php"] = { link = "Pearl" },
-          ["@constructor.php"] = { link = "CambridgeBlue" },
+          ["@module.php"] = { link = "LightViolet" },
+          ["@function.method.php"] = { link = "Main" },
+          ["@constructor.php"] = { link = "BlueVariant" },
           ["@variable.parameter.php"] = { link = "Blue" },
-          ["@operator.php"] = { link = "VioletGray" },
+          ["@operator.php"] = { link = "LightViolet" },
           ["@variable.php"] = { link = "Blue" },
           ["@property.php"] = { link = "Blue" },
           ["@variable.member.php"] = { link = "Blue" },
           ["@type.builtin.php"] = { link = "Violet" },
           ["@variable.builtin.php"] = { link = "LightOrange" },
-          ["@function.method.call.php"] = { link = "Pearl" },
-          ["@function.call.php"] = { link = "Pearl" },
+          ["@function.method.call.php"] = { link = "Main" },
+          ["@function.call.php"] = { link = "Main" },
           ------------ PHP Doc ------------
           ["@variable.parameter.phpdoc"] = { link = "Black" },
           ["@keyword.phpdoc"] = { link = "Black" },
           ------------ Blink ------------
-          ["BlinkCmpMenu"] = { link = "Pearl" },
+          ["BlinkCmpMenu"] = { link = "Main" },
           ["BlinkCmpMenuSelection"] = { link = "Background" },
-          ["BlinkCmpMenuBorder"] = { link = "Pearl" },
+          ["BlinkCmpMenuBorder"] = { link = "Main" },
           ["BlinkCmpScrollBarThumb"] = { link = "Background" },
-          ["BlinkCmpScrollBarGutter"] = { link = "Pearl" },
-          ["BlinkCmpLabel"] = { link = "Pearl" },
+          ["BlinkCmpScrollBarGutter"] = { link = "Main" },
+          ["BlinkCmpLabel"] = { link = "Main" },
           ["BlinkCmpLabelMatch"] = { link = "Green" },
-          ["BlinkCmpDoc"] = { link = "Pearl" },
-          ["BlinkCmpDocBorder"] = { link = "Pearl" },
-          ["BlinkCmpDocSeparator"] = { link = "Pearl" },
-          ["BlinkCmpSignatureHelpBorder"] = { link = "Pearl" },
+          ["BlinkCmpDoc"] = { link = "Main" },
+          ["BlinkCmpDocBorder"] = { link = "Main" },
+          ["BlinkCmpDocSeparator"] = { link = "Main" },
+          ["BlinkCmpSignatureHelpBorder"] = { link = "Main" },
           ------------ Git Graph ------------
           ["GitGraphBranch1"] = { link = "Blue" },
           ["GitGraphBranch2"] = { link = "LightRed" },
@@ -98,8 +103,8 @@ return {
           ["SnacksIndent3"] = { link = "Green" },
           ["SnacksIndent4"] = { link = "Violet" },
           ["SnacksIndent5"] = { link = "LightOrange" },
-          ["SnacksIndent6"] = { link = "CambridgeBlue" },
-          ["SnacksIndent7"] = { link = "VioletGray" },
+          ["SnacksIndent6"] = { link = "BlueVariant" },
+          ["SnacksIndent7"] = { link = "LightViolet" },
           ["SnacksIndent8"] = { link = "Orange" },
         }
       end,
