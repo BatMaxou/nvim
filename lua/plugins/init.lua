@@ -22,4 +22,5 @@ return {
   require("configs.auto-pairs"),
   require("configs.surround"),
   require("configs.comment"),
+  require("configs.treesitter-textobjects"),
 }
