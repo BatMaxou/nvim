@@ -18,10 +18,10 @@ return {
   require("configs.lazygit"),
   require("configs.gitsigns"),
   require("configs.gitgraph"),
-  require("configs.colorizer"),
   require("configs.auto-pairs"),
   require("configs.surround"),
   require("configs.comment"),
   require("configs.treesitter-textobjects"),
   require("configs.hop"),
+  require("configs.highlight-colors"),
 }
