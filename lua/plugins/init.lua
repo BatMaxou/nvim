@@ -23,4 +23,5 @@ return {
   require("configs.surround"),
   require("configs.comment"),
   require("configs.treesitter-textobjects"),
+  require("configs.hop"),
 }
