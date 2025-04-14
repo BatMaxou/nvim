@@ -23,4 +23,5 @@ return {
   require("configs.treesitter-textobjects"),
   require("configs.hop"),
   require("configs.highlight-colors"),
+  require("configs.silicon"),
 }

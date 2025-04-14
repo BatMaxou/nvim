@@ -23,7 +23,7 @@ map("n", "<S-b>", "e", { desc = "End Word" })
 
 ------------ comment ------------
 map("n", "<leader>:", "gcc", { desc = "toggle comment", remap = true })
-map("v", "<leader>:", "gbc", { desc = "toggle comment", remap = true })
+map("v", "<leader>:", "gc", { desc = "toggle comment", remap = true })
 
 ------------ oil ------------
 map("n", "-", "<cmd>Oil --float<CR>", { desc = "Open parent directory" })
@@ -40,3 +40,5 @@ map("n", "<leader>lg", function() Snacks.lazygit() end, { desc = "[L]azy[g]it" }
 ------------ gitsigns ------------
 map("n", "<leader>gw", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "[G]itsigns [W]ho ?" })
 map("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })
+
+map("v", "<leader>s", "<cmd>Silicon<CR>", { desc = "Code Screenshot" })
