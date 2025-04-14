@@ -1,18 +1,12 @@
 return {
-  "kdheepak/lazygit.nvim",
-  lazy = true,
-  cmd = {
-    "LazyGit",
-    "LazyGitConfig",
-    "LazyGitCurrentFile",
-    "LazyGitFilter",
-    "LazyGitFilterCurrentFile",
+  theme = {
   },
-  -- optional for floating window border decoration
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-  },
-  keys = {
-    { "<leader>lg", "<cmd>LazyGit<cr>", desc = "[L]azy[g]it" },
+  win = {
+    style = "lazygit",
+    wo = {
+      winhighlight = {
+        FloatBorder = "Main",
+      }
+    },
   },
 }

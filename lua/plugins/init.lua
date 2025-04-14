@@ -15,7 +15,6 @@ return {
   require("configs.snacks"),
   require("configs.conform"),
   require("configs.blink"),
-  require("configs.lazygit"),
   require("configs.gitsigns"),
   require("configs.gitgraph"),
   require("configs.auto-pairs"),

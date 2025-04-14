@@ -34,6 +34,9 @@ map("n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "sho
 ------------ terminal ------------
 map({ "n", "t" }, "<A-i>", function() Snacks.terminal.toggle() end, { desc = "Toggle terminal" })
 
+------------ lazygit ------------
+map("n", "<leader>lg", function() Snacks.lazygit() end, { desc = "[L]azy[g]it" })
+
 ------------ gitsigns ------------
 map("n", "<leader>gw", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "[G]itsigns [W]ho ?" })
 map("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })
