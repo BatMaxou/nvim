@@ -5,7 +5,7 @@ return {
     style = "lazygit",
     wo = {
       winhighlight = {
-        FloatBorder = "Main",
+        FloatBorder = "Green",
       }
     },
   },

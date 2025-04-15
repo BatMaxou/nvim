@@ -20,17 +20,9 @@ return {
         local theme = colors.theme
 
         return {
-          ------------ Transparent Default Windows ------------
-          NormalFloat = { bg = "none" },
-          FloatBorder = { bg = "none" },
-          FloatTitle = { bg = "none" },
-
-          -- Save an hlgroup with dark background and dimmed foreground
-          -- so that you can use it where your still want darker windows.
-          -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
-          NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
           ------------ General | Foreground ------------
           Main = { fg = colors.palette.fujiWhite },
+          Secondary = { fg = colors.palette.carpYellow },
           White = { fg = colors.palette.white },
           LightOrange = { fg = colors.palette.surimiOrange },
           Orange = { fg = colors.palette.roninYellow },
@@ -46,6 +38,34 @@ return {
           DeepBlack = { fg = colors.palette.sumiInk0 },
           ------------ General | Background ------------
           Background = { fg = colors.palette.sumiInk0, bg = colors.palette.fujiWhite },
+          VioletBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.oniViolet },
+          LightOrangeBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.surimiOrange },
+          LightRedBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.peachRed },
+          BlueVariantBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.waveAqua2 },
+          GreenBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.springGreen },
+          BlueBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.springBlue },
+          SecondaryBackground = { fg = colors.palette.sumiInk0, bg = colors.palette.carpYellow },
+          TransparentVioletBackground = { fg = colors.palette.fujiWhite, bg = colors.palette.sumiInk4 },
+          ------------ General | Remove Unwanted Text Decoration -----------
+          Boolean = { bold = false },
+          Statement = { bold = false },
+          Search = { link = "TransparentVioletBackground", bold = false },
+          CurSearch = { link = "TransparentVioletBackground", bold = false },
+          Keyword = { italic = false },
+          ["@keyword.return"] = { italic = false },
+          ------------ General | Transparent Default Windows ------------
+          NormalFloat = { bg = "none" },
+          FloatBorder = { bg = "none" },
+          FloatTitle = { bg = "none" },
+          -- Save an hlgroup with dark background and dimmed foreground
+          -- so that you can use it where your still want darker windows.
+          -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
+          NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+          ------------ FZF ------------
+          ["FzfLuaBorder"] = { link = "LightOrange" },
+          ["FzfLuaTitle"] = { link = "LightOrange" },
+          ["FzfLuaScrollBorderFull"] = { link = "LightOrange"},
+          ["FzfLuaScrollBorderEmpty"] = { link = "LightOrange" },
           ------------ Markdown ------------
           ["@markup.link.url.markdown_inline"] = { link = "Blue" }, -- (url)
           ["@markup.link.label.markdown_inline"] = { link = "Orange" }, -- [label]
@@ -57,33 +77,36 @@ return {
           ["@number.json"] = { link = "Main" },
           ------------ PHP ------------
           ["@keyword.import.php"] = { link = "Violet" },
-          ["@module.php"] = { link = "LightViolet" },
-          ["@function.method.php"] = { link = "Main" },
+          ["@module.php"] = { link = "Main" },
+          ["@function.method.php"] = { link = "Secondary" },
           ["@constructor.php"] = { link = "BlueVariant" },
           ["@variable.parameter.php"] = { link = "Blue" },
-          ["@operator.php"] = { link = "LightViolet" },
+          ["@operator.php"] = { link = "Main" },
           ["@variable.php"] = { link = "Blue" },
           ["@property.php"] = { link = "Blue" },
           ["@variable.member.php"] = { link = "Blue" },
           ["@type.builtin.php"] = { link = "Violet" },
           ["@variable.builtin.php"] = { link = "LightOrange" },
-          ["@function.method.call.php"] = { link = "Main" },
-          ["@function.call.php"] = { link = "Main" },
+          ["@function.method.call.php"] = { link = "Secondary" },
+          ["@function.call.php"] = { link = "Secondary" },
           ------------ PHP Doc ------------
           ["@variable.parameter.phpdoc"] = { link = "Black" },
           ["@keyword.phpdoc"] = { link = "Black" },
+          ["@variable.phpdoc"] = { link = "Black" },
+          ["@type.phpdoc"] = { link = "Violet" },
+          ["@attribute.phpdoc"] = { link = "LightOrange" },
           ------------ Blink ------------
           ["BlinkCmpMenu"] = { link = "Main" },
           ["BlinkCmpMenuSelection"] = { link = "Background" },
-          ["BlinkCmpMenuBorder"] = { link = "Main" },
+          ["BlinkCmpMenuBorder"] = { link = "Secondary" },
           ["BlinkCmpScrollBarThumb"] = { link = "Background" },
           ["BlinkCmpScrollBarGutter"] = { link = "Main" },
           ["BlinkCmpLabel"] = { link = "Main" },
           ["BlinkCmpLabelMatch"] = { link = "Green" },
           ["BlinkCmpDoc"] = { link = "Main" },
-          ["BlinkCmpDocBorder"] = { link = "Main" },
+          ["BlinkCmpDocBorder"] = { link = "Secondary" },
           ["BlinkCmpDocSeparator"] = { link = "Main" },
-          ["BlinkCmpSignatureHelpBorder"] = { link = "Main" },
+          ["BlinkCmpSignatureHelpBorder"] = { link = "Secondary" },
           ------------ Git Graph ------------
           ["GitGraphBranch1"] = { link = "Blue" },
           ["GitGraphBranch2"] = { link = "LightRed" },
@@ -106,6 +129,22 @@ return {
           ["SnacksIndent6"] = { link = "BlueVariant" },
           ["SnacksIndent7"] = { link = "LightViolet" },
           ["SnacksIndent8"] = { link = "Orange" },
+          ------------ Status Line ------------
+          ["MiniStatuslineModeVisual"] = { link = "VioletBackground", bold = false },
+          ["MiniStatuslineModeNormal"] = { link = "BlueBackground", bold = false },
+          ["MiniStatuslineModeInsert"] = { link = "GreenBackground", bold = false },
+          ["MiniStatuslineModeReplace"] = { link = "LightOrangeBackground", bold = false },
+          ["MiniStatuslineModeCommand"] = { link = "SecondaryBackground", bold = false },
+          ["MiniStatuslineModeOther"] = { link = "BlueVariantBackground", bold = false },
+          ------------ Noice ------------
+          ["NoiceCmdlinePopupBorder"] = { link = "Blue" },
+          ["NoiceCmdlineIcon"] = { link = "Blue" },
+          ["NoiceCmdlinePopupBorderSearch"] = { link = "LightOrange" },
+          ["NoiceCmdlineIconSearch"] = { link = "LightOrange" },
+          ------------ Nvim Tree ------------
+          ["NvimTreeGitDirty"] = { link = "Violet" },
+          ["NvimTreeGitDeleted"] = { link = "LightRed" },
+          ["NvimTreeGitNewIcon"] = { link = "Green" },
         }
       end,
     })

@@ -42,3 +42,6 @@ map("n", "<leader>gw", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "
 map("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })
 
 map("v", "<leader>s", "<cmd>Silicon<CR>", { desc = "Code Screenshot" })
+
+------------ notifier ------------
+map("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss all notifications" })

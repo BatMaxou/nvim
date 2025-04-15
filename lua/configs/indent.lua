@@ -1,8 +1,10 @@
 return {
-  hl = "SnacksIndent",
+  indent = {
+    hl = "SnacksIndent",
+  },
   scope = {
     hl = {
-      "SnacksIndent4",
+      "SnacksIndent1",
       "SnacksIndent2",
       "SnacksIndent3",
       "SnacksIndent4",

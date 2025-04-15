@@ -2,6 +2,8 @@ return {
   "folke/snacks.nvim",
   opts = {
     dashboard = {},
+    notify = {},
+    notifier = {},
     terminal = require("configs.terminal"),
     indent = require("configs.indent"),
     image = require("configs.image"),
