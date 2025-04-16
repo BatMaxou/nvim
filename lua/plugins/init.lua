@@ -11,7 +11,6 @@ return {
   require("configs.project"),
   require("configs.tree"),
   require("configs.lsp"),
-  -- require("configs.dressing"),
   require("configs.snacks"),
   require("configs.conform"),
   require("configs.blink"),
