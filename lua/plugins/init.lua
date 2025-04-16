@@ -23,4 +23,5 @@ return {
   require("configs.hop"),
   require("configs.highlight-colors"),
   require("configs.silicon"),
+  require("configs.todo-comments")
 }
