@@ -64,7 +64,7 @@ return {
           ------------ FZF ------------
           ["FzfLuaBorder"] = { link = "LightOrange" },
           ["FzfLuaTitle"] = { link = "LightOrange" },
-          ["FzfLuaScrollBorderFull"] = { link = "LightOrange"},
+          ["FzfLuaScrollBorderFull"] = { link = "LightOrange" },
           ["FzfLuaScrollBorderEmpty"] = { link = "LightOrange" },
           ------------ Markdown ------------
           ["@markup.link.url.markdown_inline"] = { link = "Blue" }, -- (url)
@@ -137,10 +137,17 @@ return {
           ["MiniStatuslineModeCommand"] = { link = "SecondaryBackground", bold = false },
           ["MiniStatuslineModeOther"] = { link = "BlueVariantBackground", bold = false },
           ------------ Noice ------------
-          ["NoiceCmdlinePopupBorder"] = { link = "Blue" },
-          ["NoiceCmdlineIcon"] = { link = "Blue" },
+          ["NoiceCmdlinePopupBorder"] = { link = "Secondary" },
+          ["NoiceCmdlineIcon"] = { link = "Secondary" },
+          ["NoiceCmdlinePopupBorderCmdline"] = { link = "Blue" },
+          ["NoiceCmdlineIconCmdline"] = { link = "Blue" },
+          ["NoiceCmdlinePopupBorderHelp"] = { link = "Green" },
+          ["NoiceCmdlineIconHelp"] = { link = "Green" },
           ["NoiceCmdlinePopupBorderSearch"] = { link = "LightOrange" },
           ["NoiceCmdlineIconSearch"] = { link = "LightOrange" },
+          ["NoiceFormatLevelInfo"] = { link = "Blue" },
+          ["NoiceFormatLevelWarn"] = { link = "LightOrange" },
+          ["NoiceFormatLevelError"] = { link = "LightRed" },
           ------------ Nvim Tree ------------
           ["NvimTreeGitDirty"] = { link = "Violet" },
           ["NvimTreeGitDeleted"] = { link = "LightRed" },
