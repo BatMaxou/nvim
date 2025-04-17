@@ -1,8 +1,8 @@
 return {
-  'nvim-treesitter/nvim-treesitter',
-  build = ':TSUpdate',
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
   config = function()
-    local configs = require('nvim-treesitter.configs');
+    local configs = require("nvim-treesitter.configs")
 
     configs.setup({
       ensure_installed = {
@@ -29,11 +29,12 @@ return {
         "sql",
         "twig",
         "typescript",
+        "tsx",
         "vim",
         "vimdoc",
         "vue",
         "xml",
-        "yaml"
+        "yaml",
       },
       sync_install = false,
       highlight = {
@@ -43,7 +44,7 @@ return {
         enable = true,
       },
       incremental_selection = {
-      enable = true,
+        enable = true,
         keymaps = {
           init_selection = "<Enter>",
           node_incremental = "<Enter>",

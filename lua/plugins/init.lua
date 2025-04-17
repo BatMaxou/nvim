@@ -25,4 +25,5 @@ return {
   require("configs.silicon"),
   require("configs.todo-comments"),
   require("configs.markdown"),
+  require("configs.auto-save"),
 }
