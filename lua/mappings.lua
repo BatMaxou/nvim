@@ -22,6 +22,7 @@ map("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "Toggle relative number" })
 map({ "n", "v" }, "<S-b>", "e", { desc = "End Word" })
 
 map("n", "<leader>,", "$a,", { desc = "Add ',' at the end of a line" })
+map("n", "<leader>;", "$a;<esc>", { desc = "Add ';' at the end of a line" })
 
 ------------ comment ------------
 map("n", "<leader>:", "gcc", { desc = "Toggle comment", remap = true })
