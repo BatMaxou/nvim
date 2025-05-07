@@ -16,9 +16,8 @@ return {
       auto_trigger = true,
       hide_during_completion = true,
       keymap = {
-        accept = "<S-Tab>",
         accept_word = "<S-Right>",
-        accept_line = "<Tab>",
+        accept_line = "<S-Tab>",
         next = "<S-Down>",
         prev = "<S-Up>",
       },
