@@ -2,19 +2,15 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    -- Automatically install LSPs and related tools to stdpath for Neovim
-    -- Mason must be loaded before its dependents so we need to set it up here.
-    -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-    { "williamboman/mason.nvim", opts = {} },
-    "williamboman/mason-lspconfig.nvim",
+    { "mason-org/mason.nvim", opts = {} },
+    "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-
-    -- Useful status updates for LSP.
-    { "j-hui/fidget.nvim", opts = {} },
-
     -- want to use blink instead of cmp
+    "saghen/blink.cmp",
     -- Allows extra capabilities provided by nvim-cmp
     -- "hrsh7th/cmp-nvim-lsp",
+    -- Useful status updates for LSP.
+    { "j-hui/fidget.nvim", opts = {} },
   },
   config = function()
     -- Brief aside: **What is LSP?**
@@ -82,11 +78,7 @@ return {
 
         -- Fuzzy find all the symbols in your current workspace.
         --  Similar to document symbols, except searches over your entire project.
-        map(
-          "<leader>ws",
-          require("fzf-lua").lsp_live_workspace_symbols,
-          "[W]orkspace [S]ymbols"
-        )
+        map("<leader>ws", require("fzf-lua").lsp_live_workspace_symbols, "[W]orkspace [S]ymbols")
 
         -- Rename the variable under your cursor.
         --  Most Language Servers support renaming across files, etc.
@@ -121,14 +113,9 @@ return {
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         if
           client
-          and client_supports_method(
-            client,
-            vim.lsp.protocol.Methods.textDocument_documentHighlight,
-            event.buf
-          )
+          and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
         then
-          local highlight_augroup =
-            vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
+          local highlight_augroup = vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
           vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
             buffer = event.buf,
             group = highlight_augroup,
@@ -154,10 +141,7 @@ return {
         -- code, if the language server you are using supports them
         --
         -- This may be unwanted, since they displace some of your code
-        if
-          client
-          and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf)
-        then
+        if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
           map("<leader>th", function()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
           end, "[T]oggle Inlay [H]ints")
@@ -198,8 +182,9 @@ return {
     --  By default, Neovim doesn't support everything that is in the LSP specification.
     --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
     --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    -- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+    -- local capabilities = vim.lsp.protocol.make_client_capabilities()
+    -- local capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+    local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -217,6 +202,7 @@ return {
       lua_ls = {},
       harper_ls = {},
       marksman = {},
+      emmet_language_server = {},
     }
 
     -- Ensure the servers and tools above are installed
@@ -239,18 +225,14 @@ return {
       "php-cs-fixer",
       "jq",
     })
-    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+    require("mason-tool-installer").setup({
+      ensure_installed = ensure_installed,
+      auto_update = true,
+    })
 
     require("mason-lspconfig").setup({
-      ensure_installed = {
-        "lua_ls",
-        "ts_ls",
-        "eslint",
-        "intelephense",
-        "harper_ls",
-        "marksman",
-      },
-      automatic_installation = false,
+      ensure_installed = {},
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
