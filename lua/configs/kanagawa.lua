@@ -100,7 +100,7 @@ return {
           ------------ TS ------------
           ["@keyword.import.tsx"] = { link = "Violet" },
           ["@punctuation.bracket.tsx"] = { link = "Pink" },
-          ["@string.tsx"] = { link = "Pink" },
+          ["@string.tsx"] = { link = "Green" },
           ["@operator.tsx"] = { link = "Main" },
           ["@variable.member.tsx"] = { link = "Blue" },
           ["@type.builtin.tsx"] = { link = "BlueVariant" },

@@ -26,4 +26,6 @@ return {
   require("configs.todo-comments"),
   require("configs.markdown"),
   require("configs.auto-save"),
+  require("configs.autotag"),
+  require("configs.scroll"),
 }
