@@ -74,7 +74,7 @@ return {
           ["@markup.italic.markdown_inline"] = { link = "LightRed", italic = true }, -- *italic*
           ["@markup.raw.markdown_inline"] = { link = "Black" }, -- `code`
           ["@markup.list.markdown"] = { link = "DarkBlue" }, -- + list
-          ["@markup.quote.markdown"] = { link = "Red" }, -- > blockcode
+          ["@markup.quote.markdown"] = { link = "Main" }, -- > blockcode
           ------------ JSON ------------
           ["@number.json"] = { link = "Main" },
           ------------ PHP ------------

@@ -24,14 +24,14 @@ return {
         swap = {
           enable = true,
           swap_next = {
-            ["<C-j>"] = { query = "@parameter.inner", desc = "Swap next parameter" }
+            ["<C-j>"] = { query = "@parameter.inner", desc = "Swap next parameter" },
           },
           swap_previous = {
-            ["<C-k>"] = { query = "@parameter.inner", desc = "Swap previous parameter" }
+            ["<C-k>"] = { query = "@parameter.inner", desc = "Swap previous parameter" },
           },
         },
         move = {
-        enable = true,
+          enable = true,
           set_jumps = true,
           goto_next_start = {
             ["(j"] = { query = "@function.outer", desc = "Go to next function start" },

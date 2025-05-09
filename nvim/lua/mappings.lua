@@ -19,6 +19,7 @@ map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "General copy whole file" })
 map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "Toggle line number" })
 map("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "Toggle relative number" })
 
+map("n", "à", "0", { desc = "Move to the beginning of the line" })
 map({ "n", "v" }, "<S-b>", "e", { desc = "End Word" })
 
 map("n", "<leader>,", "$a,", { desc = "Add ',' at the end of a line" })
