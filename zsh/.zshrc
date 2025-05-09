@@ -1,6 +1,4 @@
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -106,30 +104,36 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # GENERAL
-alias zshparam="vi ~/.zshrc"
+alias zshparam="vi ~/.dotfiles/zsh/.zshrc"
 alias zshsource="source ~/.zshrc"
 alias cdd="cd ~/Bureau/Nodevo"
 alias cddp="cd ~/Bureau/Perso"
 alias cddt="cd ~/Bureau/Test"
+alias cddp="cd ~/Bureau/Code"
+alias cdda="cddp && cd Aatis"
 alias dbstop="sudo service mariadb stop"
+alias chownd="chown -R $USER:$USER"
+alias conf="cd ~/.dotfiles && vi"
 
 # SHOW KEYS
 alias sk="screenkey -p fixed -g 15%x5%"
 
 # VIM
-alias lg="lazygit"
-alias vim="nvim"
 alias vi="nvim"
-alias conf="cd ~/.dotfiles && vi"
 
 # GIT
 alias gti="git"
 alias glo="git pull origin"
-alias gc="git commit"
+alias gc="git commit -m"
 alias gcg="gitmoji -c"
 alias gca="git commit --amend"
+alias gcaf="git commit --amend --no-edit"
 alias gfetch="git fetch -p"
+alias lg="lazygit"
 
 # SYMFONY
 alias bin="php bin/console"
@@ -154,15 +158,15 @@ alias drup-cfimport="drush config:import -y"
 alias drup-logs="drush ws"
 
 # DOCKER
-alias dc="docker-compose"
+alias dc="docker compose"
 alias dcu="dc up"
 alias dcd="dc down"
 alias dce="dc exec"
 alias dcedb="dc exec db mysql -uroot -proot"
+alias dcedbt="dc exec -T db mysql -uroot -proot"
 alias dp="dc exec php"
 alias dpbin="dp bin/console"
 alias dpbinlf="dp php -d memory_limit=-1  bin/console"
-alias jose="dpbin"
 alias dpdrush="dp vendor/bin/drush"
 alias admin1="dpdrush user-create nodevo --mail='mbatista@nodevo.com' --password='xspevu' --uri="$1
 alias admin2="dpdrush user-add-role 'administrator' nodevo --uri="$1
@@ -170,6 +174,7 @@ alias dcedbt="dc exec -T db mysql -uroot -proot"
 alias da="dc exec app"
 alias dabin="da bin/console"
 alias dadrush="da vendor/bin/drush"
+alias dps="docker ps -q"
 
 # LAUNCH
 alias auto-up="bash $HOME/automatics/bash/auto_up $1"
