@@ -108,16 +108,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # GENERAL
-alias zshparam="vi ~/.dotfiles/zsh/.zshrc"
-alias zshsource="source ~/.zshrc"
-alias cdd="cd ~/Bureau/Nodevo"
-alias cddp="cd ~/Bureau/Perso"
-alias cddt="cd ~/Bureau/Test"
-alias cddp="cd ~/Bureau/Code"
+alias zshparam="vi $HOME/.dotfiles/zsh/.zshrc"
+alias zshsource="source $HOME/.zshrc"
+alias cdd="cd $HOME/Bureau/Nodevo"
+alias cddp="cd $HOME/Bureau/Perso"
+alias cddt="cd $HOME/Bureau/Test"
+alias cddp="cd $HOME/Bureau/Code"
 alias cdda="cddp && cd Aatis"
 alias dbstop="sudo service mariadb stop"
 alias chownd="chown -R $USER:$USER"
-alias conf="cd ~/.dotfiles && vi"
+alias conf="cd $HOME/.dotfiles && vi"
+alias wallpaper="bash $HOME/.dotfiles/wallpapers/scripts/random_wallpaper.sh"
 
 # SHOW KEYS
 alias sk="screenkey -p fixed -g 15%x5%"

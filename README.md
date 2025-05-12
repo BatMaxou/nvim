@@ -40,3 +40,15 @@ TODO
 ```bash
 ln -s ~/.dotfiles/ghostty ~/.config/ghostty
 ```
+
+## Wallpapers
+
+```bash
+ln -s ~/.dotfiles/wallpapers/backgrounds ~/.local/share/backgrounds
+```
+
+### Random wallpaper
+
+```bash
+bash ~/.dotfiles/wallpapers/scripts/random_wallpaper.sh
+```
