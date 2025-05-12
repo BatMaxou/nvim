@@ -52,3 +52,16 @@ ln -s ~/.dotfiles/wallpapers/backgrounds ~/.local/share/backgrounds
 ```bash
 bash ~/.dotfiles/wallpapers/scripts/random_wallpaper.sh
 ```
+
+## Starship
+
+### Requirements
+
+TODO
+
+### Initialisation
+
+```bash
+ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
+```
+

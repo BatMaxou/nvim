@@ -22,8 +22,8 @@ font-size = 9.9
 background-opacity = 0.8
 window-theme = ghostty
 gtk-titlebar = true
-window-padding-x = 6
-window-padding-y = 6
+window-padding-x = 10
+window-padding-y = 0
 #sumiInk0
 window-titlebar-background = #16161D
 
