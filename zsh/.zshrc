@@ -181,6 +181,8 @@ alias da="dc exec app"
 alias dabin="da bin/console"
 alias dadrush="da vendor/bin/drush"
 alias dps="docker ps -q"
+alias dvdb="docker compose cp db:var/lib/mysql ./docker_bkp && tar -czf docker_bkp.tar.gz ./docker_bkp && rm -rf ./docker_bkp"
+alias dvdr="tar -xf docker_bkp.tar.gz && docker compose cp ./docker_bkp/. db:var/lib/mysql && rm -rf ./docker_bkp && docker compose restart"
 
 # LAUNCH
 alias auto-up="bash $HOME/automatics/bash/auto_up $1"
