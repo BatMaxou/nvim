@@ -18,6 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 ------------ options ------------
 require('options')
 
+------------ commands ------------
+require('commands')
+
 ------------ autocmds ------------
 require('autocmds')
 

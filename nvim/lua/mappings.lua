@@ -25,6 +25,9 @@ map({ "n", "v" }, "<S-b>", "e", { desc = "End Word" })
 map("n", "<leader>,", "$a,", { desc = "Add ',' at the end of a line" })
 map("n", "<leader>;", "$a;<esc>", { desc = "Add ';' at the end of a line" })
 
+map("v", "<leader>u", "gU", { desc = "Uppercase" })
+map("v", "<leader>l", "gu", { desc = "Lowercase" })
+
 ------------ comment ------------
 map("n", "<leader>:", "gcc", { desc = "Toggle comment", remap = true })
 map("v", "<leader>:", "gc", { desc = "Toggle comment", remap = true })
@@ -45,7 +48,8 @@ map("n", "<leader>lg", function() Snacks.lazygit() end, { desc = "[L]azy[g]it" }
 map("n", "<leader>gw", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "[G]itsigns [W]ho ?" })
 map("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "[G]itsigns [P]review hunk" })
 
-map("v", "<leader>s", "<cmd>Silicon<CR>", { desc = "Code Screenshot" })
+------------ screenshot ------------
+map("v", "<leader>ss", "<cmd>Silicon<CR>", { desc = "Code Screenshot" })
 
 ------------ notifier ------------
 map("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss all notifications" })
