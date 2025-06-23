@@ -25,3 +25,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "@lsp.typemod.function.readonly.typescriptreact", { link = "None" })
   end,
 })
+
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = ".env*",
+  command = "set filetype=sh"
+})
