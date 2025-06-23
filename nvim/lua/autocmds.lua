@@ -24,6 +24,17 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "@lsp.typemod.function.local.typescriptreact", { link = "None" })
     vim.api.nvim_set_hl(0, "@lsp.typemod.function.readonly.typescriptreact", { link = "None" })
   end,
+});
+
+local augroup = vim.api.nvim_create_augroup("FileTypeIndent", { clear = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+    group = augroup,
+    pattern = { "php" },
+    callback = function()
+        vim.opt_local.tabstop = 4
+        vim.opt_local.shiftwidth = 4
+    end,
 })
 
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
