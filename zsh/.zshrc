@@ -70,7 +70,8 @@ ZSH_THEME="edvardm"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git nvm)
+zstyle ':omz:plugins:nvm' lazy yes
 
 # OMZSH
 source $ZSH/oh-my-zsh.sh
