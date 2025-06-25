@@ -189,17 +189,21 @@ alias dvdr="tar -xf docker_bkp.tar.gz && docker compose cp ./docker_bkp/. db:var
 alias auto-up="bash $HOME/automatics/bash/auto_up $1"
 alias auto-run="bash $HOME/automatics/bash/auto_run $1 $2"
 alias increase-watch="bash $HOME/automatics/bash/increase_watch"
-alias launch-see="cdd && auto-up SEE && cd SEE && auto-up see-content && auto-run see-content start docker && auto-up see-store && increase-watch && auto-run see-front dev && cd .."
-alias launch-see-legacy="cdd && code SEE && auto-up SEE && cd SEE && code see-content && auto-up see-content && auto-run see-content start docker && code see-store && auto-up see-store && code see-front && increase-watch && auto-run see-front dev && cd .."
-alias launch-btl="cdd && cd BTL && auto-up btl-api && code btl-api && code btl-front && auto-run btl-front dev && cd .."
+alias launch-see="cdd && auto-up SEE && cd SEE && auto-up see-content && sleep 2 && auto-run see-content develop docker && auto-up see-store && increase-watch && auto-run see-front dev && cd .."
+alias launch-btl="cdd && cd BTL && auto-up btl-api && increase-watch && auto-run btl-front dev && cd .."
 alias launch-promeo="cdd && cd Promeo && auto-up promeo-api && cd Drupal && auto-up promeo-website && cd .. && auto-run promeo-business dev && cd .."
-alias launch-promeo-legacy="cdd && cd Promeo && auto-up promeo-api && code promeo-api && cd Drupal && auto-up promeo-website && code promeo-website && cd .. && auto-run promeo-business dev && code promeo-business && cd .."
 alias launch-uimm-pc="cdd && cd Promeo && auto-up promeo-api && cd Drupal && auto-up uimm-pc-website && cd .. && auto-run promeo-business dev && cd .."
 alias launch-uimm-lorraine="cdd && cd Promeo && auto-up promeo-api && cd Drupal && auto-up uimm-lorraine-website && cd .. && auto-run promeo-business dev && cd .."
 alias launch-promeo-web="cdd && cd Promeo/Drupal && auto-up promeo-website && cd ../.."
 alias launch-uimm-pc-web="cdd && cd Promeo/Drupal && auto-up uimm-pc-website && cd ../.."
 alias launch-uimm-lorraine-web="cdd && cd Promeo/Drupal && auto-up uimm-lorraine-website && cd ../.."
 
+# LEGACY
+alias launch-btl-legacy="cdd && cd BTL && auto-up btl-api && code btl-api && code btl-front && auto-run btl-front dev && cd .."
+alias launch-see-legacy="cdd && code SEE && auto-up SEE && cd SEE && code see-content && auto-up see-content && auto-run see-content start docker && code see-store && auto-up see-store && code see-front && increase-watch && auto-run see-front dev && cd .."
+alias launch-promeo-legacy="cdd && cd Promeo && auto-up promeo-api && code promeo-api && cd Drupal && auto-up promeo-website && code promeo-website && cd .. && auto-run promeo-business dev && code promeo-business && cd .."
+
+# HELPER
 alias memo="vi $HOME/automatics/memo/auto_run.txt"
 alias test="bash $HOME/automatics/bash/test $1 $2"
 
