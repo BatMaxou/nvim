@@ -1,3 +1,7 @@
+z:
+	@ln -s ~/.dotfiles/z/z.sh ~/z.sh
+.PHONY: z
+
 zsh:
 	@ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 .PHONY: zsh
@@ -13,3 +17,7 @@ nvim:
 starship:
 	@ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 .PHONY: starship
+
+wallpapers:
+	@ln -s ~/.dotfiles/wallpapers/backgrounds ~/.local/share/backgrounds
+.PHONY: wallpapers

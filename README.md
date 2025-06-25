@@ -14,7 +14,17 @@ TODO
 ### Initialisation
 
 ```bash
-ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
+make zsh
+```
+
+## Z
+
+TODO
+
+### Initialisation
+
+```bash
+make z
 ```
 
 ## Neovim
@@ -26,7 +36,7 @@ TODO
 ### Initialisation
 
 ```bash
-ln -s ~/.dotfiles/nvim ~/.config/nvim
+make nvim
 ```
 
 ## Ghostty
@@ -38,13 +48,13 @@ TODO
 ### Initialisation
 
 ```bash
-ln -s ~/.dotfiles/ghostty ~/.config/ghostty
+make ghostty
 ```
 
 ## Wallpapers
 
 ```bash
-ln -s ~/.dotfiles/wallpapers/backgrounds ~/.local/share/backgrounds
+make wallpapers
 ```
 
 ### Random wallpaper
@@ -62,6 +72,6 @@ TODO
 ### Initialisation
 
 ```bash
-ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
+make starship
 ```
 
